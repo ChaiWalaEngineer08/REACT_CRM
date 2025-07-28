@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "module": "commonjs",
+        "jsx": "react-jsx",
+        "typeRoots": ["./node_modules/@types", "./src/types"],  
+        "esModuleInterop": true,
+         "skipLibCheck": true,
+         "resolveJsonModule": true, 
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "jest.setup.ts",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/tests/**/*.ts",
+        "src/tests/**/*.tsx"
+    ]
+}

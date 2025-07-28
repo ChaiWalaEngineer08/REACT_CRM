@@ -1,0 +1,222 @@
+[
+  {
+    "id": "9s41rp",
+    "name": "Kelvin Langosh",
+    "email": "kelvin.langosh@mail.com",
+    "phone": 5550100000,
+    "createdAt": "2025-06-02",
+    "status": "active",
+    "industry": "SaaS",
+    "monthlySpend": 399,
+    "lifetimeValue": 4800
+  },
+  {
+    "id": "08m6rx",
+    "name": "Molly Purdy",
+    "email": "molly.purdy@mail.com",
+    "phone": 5550100001,
+    "createdAt": "2025-07-01",
+    "status": "prospect",
+    "industry": "Finance",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  },
+  {
+    "id": "5ymtrc",
+    "name": "Henry Lynch",
+    "email": "henry.lynch@mail.com",
+    "phone": 5550100002,
+    "createdAt": "2025-05-17",
+    "status": "active",
+    "industry": "Retail",
+    "monthlySpend": 249,
+    "lifetimeValue": 3200
+  },
+  {
+    "id": "ek5b97",
+    "name": "Glenda Douglas",
+    "email": "glenda.douglas@mail.com",
+    "phone": 5550100003,
+    "createdAt": "2025-03-22",
+    "status": "inactive",
+    "industry": "SaaS",
+    "monthlySpend": 0,
+    "lifetimeValue": 2400
+  },
+  {
+    "id": "xxtydd",
+    "name": "Leone Williamson",
+    "email": "leone.williamson@mail.com",
+    "phone": 5550100004,
+    "createdAt": "2025-07-04",
+    "status": "prospect",
+    "industry": "Healthcare",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  },
+  {
+    "id": "wzxj9m",
+    "name": "Mckenna Friesen",
+    "email": "mckenna.friesen@mail.com",
+    "phone": 5550100005,
+    "createdAt": "2025-06-14",
+    "status": "active",
+    "industry": "Finance",
+    "monthlySpend": 199,
+    "lifetimeValue": 2200
+  },
+  {
+    "id": "21dwtz",
+    "name": "Wyman Jast",
+    "email": "wyman.jast@mail.com",
+    "phone": 5550100006,
+    "createdAt": "2025-04-09",
+    "status": "inactive",
+    "industry": "Retail",
+    "monthlySpend": 0,
+    "lifetimeValue": 1800
+  },
+  {
+    "id": "o89e4k",
+    "name": "Janick Willms",
+    "email": "janick.willms@mail.com",
+    "phone": 5550100007,
+    "createdAt": "2025-06-30",
+    "status": "active",
+    "industry": "SaaS",
+    "monthlySpend": 499,
+    "lifetimeValue": 499
+  },
+  {
+    "id": "xozg1q",
+    "name": "Kaci Harber",
+    "email": "kaci.harber@mail.com",
+    "phone": 5550100008,
+    "createdAt": "2025-02-11",
+    "status": "inactive",
+    "industry": "Healthcare",
+    "monthlySpend": 0,
+    "lifetimeValue": 1600
+  },
+  {
+    "id": "0oh0sr",
+    "name": "Desiree Gutmann",
+    "email": "desiree.gutmann@mail.com",
+    "phone": 5550100009,
+    "createdAt": "2025-07-03",
+    "status": "prospect",
+    "industry": "SaaS",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  },
+  {
+    "id": "a3n2ky",
+    "name": "Riley Bernier",
+    "email": "riley.bernier@mail.com",
+    "phone": 5550100010,
+    "createdAt": "2025-01-19",
+    "status": "active",
+    "industry": "Finance",
+    "monthlySpend": 299,
+    "lifetimeValue": 3500
+  },
+  {
+    "id": "b6g4qp",
+    "name": "Geneva Swift",
+    "email": "geneva.swift@mail.com",
+    "phone": 5550100011,
+    "createdAt": "2025-06-01",
+    "status": "active",
+    "industry": "Retail",
+    "monthlySpend": 149,
+    "lifetimeValue": 149
+  },
+  {
+    "id": "c1hk8v",
+    "name": "Lina Kertzmann",
+    "email": "lina.kertzmann@mail.com",
+    "phone": 5550100012,
+    "createdAt": "2024-12-29",
+    "status": "inactive",
+    "industry": "Healthcare",
+    "monthlySpend": 0,
+    "lifetimeValue": 2750
+  },
+  {
+    "id": "d4u9sa",
+    "name": "Marta O'Keefe",
+    "email": "marta.okeefe@mail.com",
+    "phone": 5550100013,
+    "createdAt": "2025-05-04",
+    "status": "active",
+    "industry": "SaaS",
+    "monthlySpend": 249,
+    "lifetimeValue": 249
+  },
+  {
+    "id": "e7px3j",
+    "name": "Eric Schoen",
+    "email": "eric.schoen@mail.com",
+    "phone": 5550100014,
+    "createdAt": "2025-06-18",
+    "status": "prospect",
+    "industry": "Finance",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  },
+  {
+    "id": "f2q5zb",
+    "name": "Mabel Kassulke",
+    "email": "mabel.kassulke@mail.com",
+    "phone": 5550100015,
+    "createdAt": "2025-07-05",
+    "status": "prospect",
+    "industry": "Retail",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  },
+  {
+    "id": "g9vd4t",
+    "name": "Lucy Feil",
+    "email": "lucy.feil@mail.com",
+    "phone": 5550100016,
+    "createdAt": "2025-03-07",
+    "status": "active",
+    "industry": "Healthcare",
+    "monthlySpend": 199,
+    "lifetimeValue": 2400
+  },
+  {
+    "id": "h6cm1u",
+    "name": "Orion Kihn",
+    "email": "orion.kihn@mail.com",
+    "phone": 5550100017,
+    "createdAt": "2025-04-22",
+    "status": "inactive",
+    "industry": "SaaS",
+    "monthlySpend": 0,
+    "lifetimeValue": 900
+  },
+  {
+    "id": "i3sj7x",
+    "name": "Charlie Schinner",
+    "email": "charlie.schinner@mail.com",
+    "phone": 5550100018,
+    "createdAt": "2025-02-25",
+    "status": "active",
+    "industry": "Finance",
+    "monthlySpend": 349,
+    "lifetimeValue": 4100
+  },
+  {
+    "id": "j8vl0p",
+    "name": "Ila Casper",
+    "email": "ila.casper@mail.com",
+    "phone": 5550100019,
+    "createdAt": "2025-06-27",
+    "status": "prospect",
+    "industry": "Retail",
+    "monthlySpend": 0,
+    "lifetimeValue": 0
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "rootDir": ".",
+    "esModuleInterop": true,          // 🔑 allows default imports
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": false
+  },
+  "include": ["server.ts", "src/api/middleware/**/*.ts"]
+}

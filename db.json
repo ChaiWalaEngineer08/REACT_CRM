@@ -1,0 +1,213 @@
+{
+  "clients": [
+    {
+      "id": "b6g4qp",
+      "name": "Geneva Swifta",
+      "email": "geneva.swift@mail.com",
+      "phone": 5550100011,
+      "createdAt": "2025-06-01",
+      "status": "active",
+      "industry": "Retail",
+      "monthlySpend": 149,
+      "lifetimeValue": 149
+    },
+    {
+      "id": "c1hk8v",
+      "name": "Lina Kertzmann",
+      "email": "lina.kertzmann@mail.com",
+      "phone": 5550100012,
+      "createdAt": "2024-12-29",
+      "status": "inactive",
+      "industry": "Healthcare",
+      "monthlySpend": 0,
+      "lifetimeValue": 2750
+    },
+    {
+      "id": "f2q5zb",
+      "name": "Mabel Kassulke",
+      "email": "mabel.kassulke@mail.com",
+      "phone": 5550100015,
+      "createdAt": "2025-07-05",
+      "status": "prospect",
+      "industry": "Retail",
+      "monthlySpend": 0,
+      "lifetimeValue": 0
+    },
+    {
+      "id": "g9vd4t",
+      "name": "Lucy Feil",
+      "email": "lucy.feil@mail.com",
+      "phone": 5550100016,
+      "createdAt": "2025-03-07",
+      "status": "active",
+      "industry": "Healthcare",
+      "monthlySpend": 199,
+      "lifetimeValue": 2400
+    },
+    {
+      "id": "h6cm1u",
+      "name": "Orion Kihn",
+      "email": "orion.kihn@mail.com",
+      "phone": 5550100017,
+      "createdAt": "2025-04-22",
+      "status": "inactive",
+      "industry": "SaaS",
+      "monthlySpend": 0,
+      "lifetimeValue": 900
+    },
+    {
+      "id": "i3sj7x",
+      "name": "Charlie Schinner",
+      "email": "charlie.schinner@mail.com",
+      "phone": 5550100018,
+      "createdAt": "2025-02-25",
+      "status": "active",
+      "industry": "Finance",
+      "monthlySpend": 349,
+      "lifetimeValue": 4100
+    },
+    {
+      "id": "j8vl0p",
+      "name": "Ila Casper",
+      "email": "ila.casper@mail.com",
+      "phone": 5550100019,
+      "createdAt": "2025-06-27",
+      "status": "active",
+      "industry": "Retail",
+      "monthlySpend": 0,
+      "lifetimeValue": 0
+    },
+    {
+      "id": "EGvJ-",
+      "name": "Piyush",
+      "email": "official.piyush2k24@gmail.com",
+      "phone": 9876543210,
+      "createdAt": "2025-07-18",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 900,
+      "lifetimeValue": 9000
+    },
+    {
+      "id": "2ZVW8",
+      "name": "Naty",
+      "email": "admin@demo.com",
+      "phone": 9876543210,
+      "createdAt": "2025-07-19",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 90,
+      "lifetimeValue": 890
+    },
+    {
+      "id": "-tOSI",
+      "name": "Piyush",
+      "email": "piyush.i.raj@ccenture.com",
+      "phone": 8862809613,
+      "createdAt": "2025-07-19",
+      "status": "prospect",
+      "industry": "Retail",
+      "monthlySpend": 900,
+      "lifetimeValue": 4500
+    },
+    {
+      "id": "8EYDx",
+      "name": "Piyush",
+      "email": "kelvin.langosh@mail.comm",
+      "phone": 9876543290,
+      "createdAt": "2025-07-20",
+      "status": "prospect",
+      "industry": "Healthcare",
+      "monthlySpend": 90,
+      "lifetimeValue": 980
+    },
+    {
+      "id": "patCW",
+      "name": "Piyush",
+      "email": "admin@demo.comm",
+      "phone": 9876543219,
+      "createdAt": "2025-07-20",
+      "status": "prospect",
+      "industry": "Retail",
+      "monthlySpend": 9,
+      "lifetimeValue": 9876
+    },
+    {
+      "id": "45Dhl",
+      "name": "Piyush",
+      "email": "admin@demo.commm",
+      "phone": 9876543217,
+      "createdAt": "2025-07-20",
+      "status": "prospect",
+      "industry": "Finance",
+      "monthlySpend": 98,
+      "lifetimeValue": 980
+    },
+    {
+      "id": "XRn2w",
+      "name": "Piyush",
+      "email": "admin@demo.commmmm",
+      "phone": 9876543212,
+      "createdAt": "2025-07-20",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 90,
+      "lifetimeValue": 900
+    },
+    {
+      "id": "9_0UR",
+      "name": "Wyman Jasta",
+      "email": "wyman.jast@mail.comm",
+      "phone": 9876543215,
+      "createdAt": "2025-07-21",
+      "status": "active",
+      "industry": "Healthcare",
+      "monthlySpend": 90,
+      "lifetimeValue": 900
+    },
+    {
+      "id": "4_5Gj",
+      "name": "Wyman Jasta",
+      "email": "piyush.i.raj@ccenture.comm",
+      "phone": 9876543276,
+      "createdAt": "2025-07-21",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 90,
+      "lifetimeValue": 0
+    },
+    {
+      "id": "JGoRb",
+      "name": "Piyush ",
+      "email": "admin@demo.commmmmmmm",
+      "phone": 9876543568,
+      "createdAt": "2025-07-25",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 0,
+      "lifetimeValue": 0
+    },
+    {
+      "id": "UgJ9x",
+      "name": "Piyush ",
+      "email": "admin@demo.comm",
+      "phone": 9876543456,
+      "createdAt": "2025-07-26",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 900,
+      "lifetimeValue": 0
+    },
+    {
+      "id": "6Dkfk",
+      "name": "Shubham",
+      "email": "office@gmail.com",
+      "phone": 8102765951,
+      "createdAt": "2025-07-26",
+      "status": "prospect",
+      "industry": "SaaS",
+      "monthlySpend": 9000,
+      "lifetimeValue": 0
+    }
+  ]
+}
