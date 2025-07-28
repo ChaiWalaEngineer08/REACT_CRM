@@ -2,7 +2,7 @@
   "name": "react-crm",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "concurrently \"vite\" \"npm:api\"",
     "api": "ts-node --project tsconfig.server.json server.ts",
