@@ -30,18 +30,18 @@ export default function Dashboard() {
   /* handlers & memos */
   const goToClients = useCallback(() => nav('/clients'), [nav]);
 
-  const total = useMemo(() => clients.length, [clients]);
+  const total = useMemo(() => clients?.length, [clients]);
   const active = useMemo(
-    () => clients.filter((c) => c.status === 'active').length,
+    () => clients?.filter((c) => c.status === 'active').length,
     [clients],
   );
   const mrr = useMemo(
-    () => clients.reduce((sum, c) => sum + c.monthlySpend, 0),
+    () => clients?.reduce((sum, c) => sum + c.monthlySpend, 0),
     [clients],
   );
   const newThisMonth = useMemo(
     () =>
-      clients.filter(
+      clients?.filter(
         (c) => c.createdAt.slice(0, 7) === new Date().toISOString().slice(0, 7),
       ).length,
     [clients],
@@ -59,7 +59,7 @@ export default function Dashboard() {
 
   const growthData = useMemo(() => {
     const map: Record<string, number> = {};
-    clients.forEach((c) => {
+    clients?.forEach((c) => {
       const key = c.createdAt.slice(0, 7);
       map[key] = (map[key] || 0) + 1;
     });
@@ -71,12 +71,12 @@ export default function Dashboard() {
       { name: 'Active', value: active, color: STATUS_COLORS.active },
       {
         name: 'Prospect',
-        value: clients.filter((c) => c.status === 'prospect').length,
+        value: clients?.filter((c) => c.status === 'prospect').length,
         color: STATUS_COLORS.prospect,
       },
       {
         name: 'Inactive',
-        value: clients.filter((c) => c.status === 'inactive').length,
+        value: clients?.filter((c) => c.status === 'inactive').length,
         color: STATUS_COLORS.inactive,
       },
     ],
@@ -85,7 +85,7 @@ export default function Dashboard() {
 
   const industryData = useMemo(() => {
     const map: Record<string, number> = {};
-    clients.forEach((c) => {
+    clients?.forEach((c) => {
       map[c.industry] = (map[c.industry] || 0) + 1;
     });
     return Object.entries(map).map(([industry, count]) => ({ industry, count }));
