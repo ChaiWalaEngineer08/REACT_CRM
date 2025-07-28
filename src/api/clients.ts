@@ -3,10 +3,11 @@ import type { Client } from '../types/clients';
 import { toast } from 'react-toastify';
 
 
-export const API_BASE = 'http://localhost:4000/api';
+// read the base URL from Vite’s env vars.
+// TS knows import.meta.env.VITE_API_BASE is a string | undefined.
+const API_BASE = 'https://reactcrm-production-e5f6.up.railway.app/api'
 
-/* ───── axios instance ───── */
-export const api = axios.create({ baseURL: `${API_BASE}` });
+export const api = axios.create({ baseURL: API_BASE })
 
 /* attach bearer token from AuthContext/localStorage */
 api.interceptors.request.use((cfg) => {
