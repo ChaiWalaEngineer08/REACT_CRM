@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { CircularProgress, Button, Box, Typography } from '@mui/material';
 
-/* ---------- loading ui (spinner) ------------------------------- */
 function ChunkSpinner() {
   return (
     <Box className="w-screen h-screen flex items-center justify-center">
@@ -12,7 +11,6 @@ function ChunkSpinner() {
   );
 }
 
-/* ---------- error ui ------------------------------------------- */
 function ChunkErrorFallback({
   error,
   resetErrorBoundary,
@@ -35,7 +33,6 @@ function ChunkErrorFallback({
   );
 }
 
-/* ---------- Composition: ErrorBoundary ⊃ Suspense -------------- */
 export default function ChunkBoundary({ children }: { children: React.ReactNode }) {
   return (
     <ErrorBoundary FallbackComponent={ChunkErrorFallback}>

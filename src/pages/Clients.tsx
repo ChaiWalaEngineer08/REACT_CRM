@@ -26,7 +26,6 @@ import type { ClientForm } from '../schemas/clientSchema';
 import type { Client } from '../types/clients';
 
 export default function ClientsPage() {
-  /* ---------------- search param ---------------- */
   const [params, setParams] = useSearchParams();
   const globalFilter = params.get('query') ?? '';
   const handleGlobalChange = useCallback(
@@ -34,20 +33,16 @@ export default function ClientsPage() {
     [setParams],
   );
 
-  /* ---------------- data ------------------------ */
   const { data, fetchNextPage, hasNextPage, isLoading, isFetching, error } =
     useInfiniteClients(globalFilter);
   const { data: allClients = [] } = useAllClients();
 
-  /* flatten pages */
   const flatData = useMemo(() => data?.pages.flatMap((p) => p.data) ?? [], [data]);
 
-  /* ---------------- add/edit/delete ------------- */
   const add = useAddClient();
   const update = useUpdateClient();
   const remove = useDeleteClient();
 
-  /* ---------------- dialog state --------------- */
   const [dialog, setDialog] = useState<
     | { mode: 'create'; row?: undefined }
     | { mode: 'edit'; row: Client }
@@ -63,8 +58,8 @@ export default function ClientsPage() {
       if (dup) {
         toast.error(
           `Client with the same ${
-            dup.email === form.email ? 'e-mail' : 'phone'
-          } already exists.`,
+            dup.email === form.email ? 'This e-mail' : 'This phone'
+          } is already registered.`,
         );
         return;
       }
@@ -85,18 +80,15 @@ export default function ClientsPage() {
     [allClients, add, update, remove, dialog],
   );
 
-  /* ---------------- scroll logic ---------------- */
   const tableContainerRef = useRef<HTMLDivElement>(null);
   const rowVirtRef = useRef<MRT_RowVirtualizer>(null);
 
-  // remember the last vertical position so horizontal scrolls don't trigger us
   const lastScrollTop = useRef(0);
 
   const fetchMoreOnScroll = useCallback(
     (el?: HTMLDivElement | null) => {
       if (!el || !hasNextPage || isFetching) return;
       const { scrollHeight, scrollTop, clientHeight } = el;
-      // only fire when we're actually near the bottom
       if (scrollTop !== lastScrollTop.current) {
         lastScrollTop.current = scrollTop;
         if (scrollHeight - scrollTop - clientHeight < 400) {
@@ -107,7 +99,6 @@ export default function ClientsPage() {
     [fetchNextPage, hasNextPage, isFetching],
   );
 
-  /* reset scroll on search change */
   useEffect(() => {
     rowVirtRef.current?.scrollToIndex?.(0);
     lastScrollTop.current = 0;
@@ -124,7 +115,6 @@ export default function ClientsPage() {
     [globalFilter, setParams],
   );
 
-  /* ---------------- error / loading ------------- */
   if (error)
     return (
       <CenterBox>
@@ -160,12 +150,10 @@ export default function ClientsPage() {
         <MaterialReactTable
           columns={CLIENT_COLUMNS}
           data={flatData}
-          enableRowVirtualization = {false}
+          enableRowVirtualization={false}
           manualFiltering
           enablePagination={false}
-          /* label the table for screen readers */
           muiTableProps={{ 'aria-label': 'Clients data table' }}
-          /* live region when fetching more */
           muiTableContainerProps={{
             ref: tableContainerRef,
             role: 'region',
@@ -174,7 +162,6 @@ export default function ClientsPage() {
             sx: { maxHeight: '65vh' },
             onScroll: (e: UIEvent<HTMLDivElement>) => fetchMoreOnScroll(e.currentTarget),
           }}
-          /* label the search input */
           muiSearchTextFieldProps={{ 'aria-label': 'Search clients' }}
           onGlobalFilterChange={handleGlobalChange}
           state={{
@@ -230,7 +217,6 @@ export default function ClientsPage() {
   );
 }
 
-/* ---------- tiny helpers ---------- */
 const CenterBox = React.memo(function CenterBox({
   children,
 }: {
@@ -249,7 +235,6 @@ const CenterBox = React.memo(function CenterBox({
     </Stack>
   );
 });
-
 
 const TopToolbar = React.memo(function TopToolbar({
   globalFilter,

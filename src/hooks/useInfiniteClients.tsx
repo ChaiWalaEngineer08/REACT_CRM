@@ -33,7 +33,7 @@ export function useInfiniteClients(globalFilter: string | undefined) {
       const res = await api.get<Client[]>('/clients', {
 params
       });
-      // await new Promise((r) => setTimeout(r, 800));
+      await new Promise((r) => setTimeout(r, 800));
       const total = Number(res.headers['x-total-count'] ?? 0);
       return {
         data : res.data,

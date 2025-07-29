@@ -8,9 +8,10 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 import { AUTH_TOKEN_KEY } from "../constants/auth.constants"; // DEMO_CREDENTIALS gone
+import { api } from "../api/clients";
 
 /* ------------------------------------------------------------------ */
 /*  Config                                                            */
@@ -66,22 +67,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   /* ---------- login ------------------------------------------------ */
   const login = async (email: string, pw: string): Promise<LoginResult> => {
-    // 1. server call – will throw if 401
-    const { data } = await axios.post<{ token: string }>(
-      "http://localhost:4000/api/login",
-      { email, password: pw },
-    );
+  try {
+    const { data } = await api.post<{ token: string }>('/login', {
+      email,
+      password: pw,
+    });
 
-    // 2. persist token (axios interceptors read this)
     localStorage.setItem("token", data.token);
-    
-
-    // 3. mark session active & start idle timer
     localStorage.setItem(AUTH_TOKEN_KEY, "true");
     setAuth(true);
     kickTimers();
     return "ok";
-  };
+  } catch (err: any) {
+    const code = err.response?.data?.error;
+
+    if (code === 'email_not_found') {
+      throw new Error('EMAIL_NOT_FOUND');
+    } else if (code === 'incorrect_password') {
+      throw new Error('INCORRECT_PASSWORD');
+    } else {
+      throw new Error('GENERIC_LOGIN_FAILURE');
+    }
+  }
+};
+
 
   /* ---------- logout ----------------------------------------------- */
   const logout = useCallback(() => {

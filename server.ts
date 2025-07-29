@@ -30,15 +30,27 @@ server.use(middle);
 
 /* ---------- public login (add parser JUST for this route) -------- */
 server.post('/api/login', express.json(), (req, res) => {
-  // ② ⬅ only here
   const { email, password } = req.body;
 
-  if (email === 'admin@demo.com' && password === '@Passw0rd') {
+  const validEmail = 'admin@demo.com';
+  const validPassword = '@Passw0rd';
+
+  // Simulate 1 second delay
+  setTimeout(() => {
+    if (email !== validEmail) {
+      return res.status(401).json({ error: 'email_not_found' });
+    }
+
+    if (password !== validPassword) {
+      return res.status(401).json({ error: 'incorrect_password' });
+    }
+
     const token = jwt.sign({ sub: email }, JWT_SECRET, { expiresIn: '30m' });
     return res.json({ token });
-  }
-  return res.status(401).json({ message: 'Invalid credentials' });
+  }, 1000); 
 });
+
+
 
 /** ── CUSTOM PAGINATION ROUTE ───────────────────────────────────── */
 server.get('/api/clients', requireAuth, async (req, res) => {

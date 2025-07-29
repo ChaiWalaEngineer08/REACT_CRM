@@ -130,7 +130,6 @@ export default function Dashboard() {
             tabIndex={0}
             aria-label={`Active clients: ${active}. Press Enter or Space to view client list.`}
             onKeyDown={(e) => {
-              // Support Enter or Space for keyboard users
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 goToClients();
@@ -155,7 +154,7 @@ export default function Dashboard() {
         </Grid>
       </section>
 
-      {/* Line chart */}
+      
       <section role="region" aria-labelledby="growth-chart-heading">
         <Typography id="growth-chart-heading" component="h2" className="sr-only">
           New Clients per Month
@@ -164,7 +163,7 @@ export default function Dashboard() {
           <figure
             role="img"
             aria-label="Line chart showing number of new clients per month"
-            style={{ margin: 0 /* remove default figure margin */ }}
+            style={{ margin: 0 }}
           >
             <ResponsiveContainer width="100%" height={260}>
               <LineChart
@@ -212,7 +211,7 @@ export default function Dashboard() {
         </ChartCard>
       </section>
 
-      {/* Pie chart */}
+      
       <section role="region" aria-labelledby="status-chart-heading">
         <Typography id="status-chart-heading" component="h2" className="sr-only">
           Clients by Status
