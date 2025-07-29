@@ -27,6 +27,13 @@ server.use((req, res, next) => {
 // server.use(express.json());
 server.use(middle);
 
+server.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://splendid-jalebi-b37d0d.netlify.app');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.sendStatus(204);
+});
+
 
 /* ---------- public login (add parser JUST for this route) -------- */
 server.post('/api/login', express.json(), (req, res) => {
