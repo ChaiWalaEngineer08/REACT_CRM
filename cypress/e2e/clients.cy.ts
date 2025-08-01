@@ -1,4 +1,3 @@
-// cypress/e2e/clients.cy.ts
 describe('Clients CRUD workflow', () => {
   beforeEach(() => {
     cy.uiLogin('admin@demo.com', '@Passw0rd');

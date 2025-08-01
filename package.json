@@ -2,7 +2,7 @@
   "name": "react-crm",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "concurrently \"vite\" \"npm:api\"",
     "api": "ts-node --project tsconfig.server.json server.ts",
@@ -27,6 +27,7 @@
     "@react-three/fiber": "8.13",
     "@tanstack/react-query": "^5.83.0",
     "axios": "^1.10.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "framer-motion": "^11.18.2",

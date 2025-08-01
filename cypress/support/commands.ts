@@ -1,8 +1,3 @@
-// cypress/support/commands.ts
-
-
-
-// 1) Tell TypeScript about our new commands:
 declare global {
   namespace Cypress {
     interface Chainable {
@@ -12,7 +7,7 @@ declare global {
   }
 }
 
-// 2) UI‐based login, then extract token into Cypress.env('TOKEN')
+// UI‐based login, then extract token into Cypress.env('TOKEN')
 Cypress.Commands.add('uiLogin', (email: string, pw: string) => {
   cy.visit('/login')
   cy.get('input[name="email"]').type(email)
@@ -29,7 +24,7 @@ Cypress.Commands.add('uiLogin', (email: string, pw: string) => {
 
 })
 
-// 3) Pure‐API login, stash in both localStorage and Cypress.env
+// Pure‐API login, stash in both localStorage and Cypress.env
 Cypress.Commands.add('loginApi', (email: string, password: string) => {
   return cy
     .request<{ token: string }>({

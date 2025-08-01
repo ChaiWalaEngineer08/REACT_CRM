@@ -3,7 +3,6 @@ dotenv.config();
 import path from 'path';
 import fs from 'fs/promises';
 import express from 'express';
-import cors from 'cors';
 import jsonServer from 'json-server';
 import jwt from 'jsonwebtoken';
 import { requireAuth } from './src/api/middleware/authMiddleware';
@@ -24,12 +23,6 @@ server.use((req, res, next) => {
   res.setHeader('Cache-Control', 'no-store');
   next();
 });
-
-server.use(cors({
-  origin: 'https://splendid-jalebi-b37d0d.netlify.app',
-  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization'],
-}));
 
 // server.use(express.json());
 server.use(middle);

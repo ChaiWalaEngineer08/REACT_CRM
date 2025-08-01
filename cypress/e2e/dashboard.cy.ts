@@ -1,4 +1,3 @@
-// cypress/e2e/dashboard.cy.ts
 import type { Client } from '../../src/types/clients';
 
 describe('Dashboard KPIs & Navigation', () => {

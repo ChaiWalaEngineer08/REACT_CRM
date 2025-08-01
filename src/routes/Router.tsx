@@ -5,7 +5,10 @@ import ChunkBoundary from '../components/ChunkBoundary';
 import { useAuth } from '../context/AuthContext';
 
 const Dashboard = lazy(() => import('../pages/Dashboard'));
-const Clients = lazy(() => import('../pages/Clients'));
+const Clients = lazy(async () => {
+  await delay(1500); // force a 1.5s wait
+  return import('../pages/Clients');
+});
 const Profile = lazy(() => import('../pages/Profile'));
 const Login = lazy(() => import('../pages/Login'));
 const NotFound = lazy(() => import('../pages/NotFound'));
@@ -14,6 +17,10 @@ const MainLayout = lazy(() => import('../layouts/MainLayout'));
 function PrivateShell() {
   const { isAuth } = useAuth();
   return isAuth ? <Outlet /> : <Navigate to="/login" replace />;
+}
+
+function delay(ms: number) {
+  return new Promise((res) => setTimeout(res, ms));
 }
 
 export default function AppRouter() {
